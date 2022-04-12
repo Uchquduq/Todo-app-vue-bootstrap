@@ -2,17 +2,18 @@
   <div class="container mt-5" style="max-width: 600px">
     <div class="bg-white my-3 p-3 rounded shadow-lg">
       <h5 class="border-bottom border-gray pb-2 mb-3">Todo App</h5>
-      <div class="form-label-group border-bottom border-gray pb-3 mb-1">
+      <div class="d-flex justify-content-between form-label-group border-bottom border-gray pb-3 mb-1">
         <input
           type="email"
           id="inputEmail"
           class="form-control"
-          placeholder="add todo ..."
+          placeholder="todo ..."
           required=""
           autofocus=""
           v-model="newTodo"
           @keyup.enter="addTodo"
         />
+        <span @click="addTodo" class="ml-2 btn btn-primary btn">Add</span>
       </div>
 
       <div
@@ -62,9 +63,12 @@
               @keyup.esc="cancelEdit(todo)"
             />
             <span class="d-flex justify-content-between">
+              <span v-if="editedTodo == todo" class="mr-2 btn btn-warning btn-sm" @click="doneEdit(todo)"
+                >Save</span
+              >
               <span class="mr-2 btn btn-primary btn-sm" @click="editTodo(todo)"
                 >Edit</span
-              >
+              > 
               <span class="btn btn-danger btn-sm" @click="removeTodo(todo)"
                 >Delete</span
               >
