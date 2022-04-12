@@ -1,6 +1,6 @@
 # vuethree
 
-LOCALSTORAGE TODO
+# LOCALSTORAGE TODO
 
 ## Project setup
 ```
