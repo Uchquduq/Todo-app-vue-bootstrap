@@ -1,5 +1,7 @@
 # vuethree
 
+LOCALSTORAGE TODO
+
 ## Project setup
 ```
 npm install
